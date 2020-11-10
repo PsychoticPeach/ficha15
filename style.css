@@ -1,17 +1,64 @@
 .btn{
     width:200px;
-    height: 100px;
-    margin: 50px;
+    height: 200px;
+    margin: 20px;
     background-color: black;
+    border: none;
+    cursor: pointer;
     color: white;
+}
+#anim5{
+    border: 3px solid rgb(42, 41, 43);
+    transition-duration: 300ms;
+}
+#anim5:hover{
+    background-color: red;
+    color:white;
+}
+#anim5::before{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background-color: mediumseagreen;
+}
+#anim5::after{
+    position: absolute;
+    content: '';
+    bottom:0;
+    right:0;
+    widows: 100%;
+    height: 3px;
+    background-color: aqua;
 
+    transition-delay: 400ms;
     transition-duration: 200ms;
 }
-#btn4{
+#anim5-span::after{
+    position: absolute;
+    content:'';
+    top:0;
+    right:0;
+    width:3px;
+    height:0;
+    background-color: blueviolet;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+}
+#anim5-span:hover::before,
+#anim5-span:hover::after{
+    height:100%
+}
+#anim5:hover::before, #anim5:hover::after{
+    width:100%;
+}
+#anim4{
     position: relative;
     transition-duration: 400ms;
 }
-#btn4::before{
+#anim4::before{
     position:absolute;
     content:'';
     top:0;
@@ -22,7 +69,7 @@
     z-index: -1;
     transition: 200ms;
 }
-#btn4::after{
+#anim4::after{
     position: absolute;
     content:'';
     bottom:0;
@@ -33,62 +80,65 @@
     z-index: -1;
     transition: 200ms;
 }
-#btn4:hover{
+#anim4:hover{
     color:white;
 }
-#btn4:hover::before, #btn4:hover::after{
+#anim4:hover::before, #btn4:hover::after{
     width:100%;
     height:100%;
 }
-#btn3{
+#anim3{
     position: relative;
-    color:white;
+    
+    transition-duration: 200ms;
 }
-#btn3::after{
+#anim3::after{
     position: absolute;
     content:'';
     bottom:0;
     left:0;
     width:100%;
-    height:100%;
-    background-color: blue;
+    height:0;
+    background-color: blueviolet;
     z-index: -1;
 }
-#btn3:hover{
+#anim3:hover{
     color:white;
 }
-#btn3:hover::after{
+#anim3:hover::after{
     height:100%;
 }
-#btn2{
-    border: 3px solid rgb(42, 41, 43);
-    transition-duration: 300ms;
+#anim2{
+    position:relative;
 }
-#btn2:hover{
-    background-color: red;
-    color:white;
-}
-#btn2::before{
+#anim2::before{
     position: absolute;
     content: '';
     top:0;
     left:0;
-    width:100%;
+    width:0;
     height:3px;
-    background-color: mediumseagreen;
+    background-color: cyan;
 }
-#btn2::after{
+#anim2::after{
     position: absolute;
     content: '';
     bottom:0;
     right:0;
-    widows: 100%;
-    height: 3px;
-    background-color: aqua;
+    width:0;
+    height:3px;
+    background-color: cyan;
 }
-#btn2:hover::before, #btn2:hover::after{
+#anim2:hover::before,
+#anim2:hover::after{
     width:100%;
 }
-.btn:hover{
-    width:400px;
+#anim1{
+    border: 3px solid rgb(42, 41, 43);
+    transition-duration: 200ms;
 }
+#anim1:hover{
+    background-color: red;
+    color:white;
+}
+
