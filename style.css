@@ -1,0 +1,22 @@
+.btn{
+    width:200px;
+    height: 100px;
+    margin: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    transition-duration: 200ms;
+}
+#btn2{
+    border:3px solid grey;
+    transition-duration: 200ms;
+}
+#btn2:hover{
+    background-color: mediumseagreen;
+    color: white;
+}
+.btn:hover{
+    width:400px;
+}
